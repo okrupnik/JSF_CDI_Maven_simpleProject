@@ -11,12 +11,14 @@
 </h:head>
 <h:body>
 	<h:form id="loginForm">
-		<h:panelGrid columns="2">
+		<h:panelGrid columns="3">
 			<h:outputLabel value="Login:" for="login"/>
 			<h:inputText id="login" value="#{cdiBean.login}" />
+			<h:message for="login" style="color:red"></h:message>
 			
 			<h:outputLabel value="Password:" for="password"/>
 			<h:inputSecret id="password" value="#{cdiBean.password}" />
+			<h:message for="password" style="color:red"></h:message>
 			
 			<h:commandButton value="Sign in" action="#{controller.doLogin}"  />
 		</h:panelGrid>
